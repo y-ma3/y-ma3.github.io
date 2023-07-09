@@ -1,0 +1,377 @@
+/* Reset styles */
+body, h1, h2, p, ul, li, form, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* ヘッダー */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .navigation ul {
+    list-style: none;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-left: 20px;
+    transition: transform 0.5s;
+  }
+
+  .nav-item.bounce {
+    transform: scale(1.1);
+  }
+  
+  .navigation a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .section-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 50px;
+    font-size: 32px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    padding: 30px;
+  }
+  
+  .profile img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+  }
+  
+  .profile .details {
+    margin-left: 50px;
+  }
+  
+  .profile h2 {
+    margin: 0;
+    font-size: 40px;
+  }
+  
+  .profile p {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  
+
+  /* Works styles */
+  #works {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* 中央配置を追加 */
+  }
+  
+  .work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .work-item {
+    flex-basis: calc(45% - 10px); /* 2つまで横並びになるように設定 */
+    margin-bottom: 40px;
+    box-shadow: 0 2px 2px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .work-item img:hover {
+    opacity: 0.6;
+  }
+  
+  .work-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .work-title {
+    font-size: 16px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 10px 0 10px 10px;
+  }  
+  
+  .policy-title {
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .policy-title::after {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url("./img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(270deg);
+    transition: transform 0.3s;
+  }
+  
+  /* Privacy policy styles */
+  #privacy-policy {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* 中央配置を追加 */
+  }
+
+  .policy-content {
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    padding-top: 20px;
+    text-align: left;
+  }
+  
+  /* About styles */
+  #about {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center; /* 中央配置を追加 */
+  }
+
+  .basic-information img {
+    border-radius: 50%; /* 円状にする */
+    object-fit: cover;
+    width: 300px; /* 幅を調整 */
+    height: 300px; /* 高さを調整 */
+  }
+
+  .about-subtitle {
+    margin-right: 65%;
+  }
+
+  .mytable {
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Contact styles */
+  #contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* 中央配置を追加 */
+  }
+  
+  #contact label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #contact button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #454c50;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .pagetop__arrow {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #454c50;
+    border-right: 3px solid #454c50;
+    transform: translateY(20%) translateX(130%) rotate(-45deg);
+  }
+
+  .pagetop:hover .pagetop__arrow {
+    transform: translateY(0%) translateX(130%) rotate(-45deg);
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons {
+    list-style: none;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    transform: scale(0.8);
+  }
+
+  .social-icons img {
+    width: 50px;
+    height: auto;
+  }
+
+  .social-icons li:hover {
+    opacity: 0.6;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    /* スマートフォン用のスタイルを指定 */
+    p {
+      font-size: 14px;
+    }
+    .header-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      text-align: center;
+    }
+    
+    .nav-item {
+      text-align: center;
+      margin: 20px 25px 0 25px;
+    }
+
+    .profile {
+      margin-left: 5%;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+    }
+
+    .profile p {
+      font-size: 15px;
+    }
+
+    .profile .details {
+      margin-left: 30px;
+    }
+
+    .work-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* 要素が折り返されるように設定 */
+    }
+
+    .work-item {
+      flex-basis: calc(80% - 20px); /* 幅の計算 */
+      margin-bottom: 40px;
+    }
+
+    .work-title {
+      font-size: 12px;
+    }
+
+    .policy-title {
+      font-size: 20px;
+    }
+
+    .work-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .work-item {
+      flex-basis: calc(75%); /* 2つまで横並びになるように設定 */
+      margin-bottom: 40px;
+    }
+
+    .basic-information img {
+      width: 200px; /* 幅を調整 */
+      height: 200px; /* 高さを調整 */
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: auto;
+    }
+}
